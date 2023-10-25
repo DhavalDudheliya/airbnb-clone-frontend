@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BASE_URL } from "./services/helper";
 
 export default function ({ place }) {
   const [showAllPhotos, setShowAllPhotos] = useState(false);
