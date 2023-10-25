@@ -25,7 +25,7 @@ export default function IndexPage() {
               {place.photos?.[0] && (
                 <img
                   className="rounded-2xl object-cover aspect-square"
-                  src={"/uploads/" + place.photos?.[0]}
+                  src={`${BASE_URL}/uploads/` + place.photos?.[0]}
                   alt=""
                 />
               )}

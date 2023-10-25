@@ -65,7 +65,7 @@ export default function PhotosUploader({ addedPhotos, onChange }) {
             <div className="group h-32 flex relative" key={link}>
               <img
                 className="rounded-2xl w-full object-cover border-2 border-gray"
-                src={"/uploads/" + link}
+                src={`${BASE_URL}/uploads/` + link}
                 alt="11"
               />
               <button

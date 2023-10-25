@@ -50,7 +50,7 @@ export default function PlacesPage() {
                   <>
                     <img
                       className="object-cover aspect-square rounded-2xl"
-                      src={"/uploads/" + place.photos[0]}
+                      src={`${BASE_URL}/uploads/` + place.photos[0]}
                       alt=""
                     />
                   </>

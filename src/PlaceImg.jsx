@@ -1,3 +1,5 @@
+import { BASE_URL } from "./services/helper";
+
 export default function PlaceImg({ place, index = 0, className = null }) {
   if (!place.photos?.length) {
     return "";
@@ -9,7 +11,7 @@ export default function PlaceImg({ place, index = 0, className = null }) {
   return (
     <img
       className={className}
-      src={"/uploads/" + place.photos[index]}
+      src={`${BASE_URL}/uploads/` + place.photos[index]}
       alt=""
     />
   );

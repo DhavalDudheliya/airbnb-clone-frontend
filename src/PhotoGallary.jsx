@@ -6,40 +6,40 @@ export default function ({ place }) {
   if (showAllPhotos) {
     return (
       // <div className={className}>
-        <div className="absolute inset-0 bg-black min-h-screen">
-          <div className="bg-black p-16 grid gap-3">
-            <div className="text-center">
-              <h2 className="text-white text-3xl">Photos of {place.title}</h2>
-            </div>
-            xl
-            <div>
-              <button
-                onClick={() => setShowAllPhotos(false)}
-                className="bg-white text-black flex gap-1 py-2 px-4 m-4 rounded-2xl fixed top-8 right-16"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                Close photos
-              </button>
-            </div>
-            {place?.photos?.length > 0 &&
-              place.photos.map((photo) => (
-                <div className="flex justify-center">
-                  <img src={"/uploads/" + photo} alt="" />
-                </div>
-              ))}
+      <div className="absolute inset-0 bg-black min-h-screen">
+        <div className="bg-black p-16 grid gap-3">
+          <div className="text-center">
+            <h2 className="text-white text-3xl">Photos of {place.title}</h2>
           </div>
+          xl
+          <div>
+            <button
+              onClick={() => setShowAllPhotos(false)}
+              className="bg-white text-black flex gap-1 py-2 px-4 m-4 rounded-2xl fixed top-8 right-16"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              Close photos
+            </button>
+          </div>
+          {place?.photos?.length > 0 &&
+            place.photos.map((photo) => (
+              <div className="flex justify-center">
+                <img src={`${BASE_URL}/uploads/` + photo} alt="" />
+              </div>
+            ))}
         </div>
+      </div>
       // </div>
     );
   }
@@ -51,7 +51,7 @@ export default function ({ place }) {
             <img
               onClick={() => setShowAllPhotos(true)}
               className="aspect-square object-cover cursor-pointer"
-              src={"/uploads/" + place.photos?.[0]}
+              src={`${BASE_URL}/uploads/` + place.photos?.[0]}
               alt=""
             />
           )}
@@ -61,7 +61,7 @@ export default function ({ place }) {
             <img
               onClick={() => setShowAllPhotos(true)}
               className="aspect-square object-cover cursor-pointer "
-              src={"/uploads/" + place.photos?.[1]}
+              src={`${BASE_URL}/uploads/` + place.photos?.[1]}
               alt=""
             />
           )}
@@ -70,7 +70,7 @@ export default function ({ place }) {
               <img
                 onClick={() => setShowAllPhotos(true)}
                 className="aspect-square object-cover relative top-2 cursor-pointer"
-                src={"/uploads/" + place.photos?.[2]}
+                src={`${BASE_URL}/uploads/` + place.photos?.[2]}
                 alt=""
               />
             )}
